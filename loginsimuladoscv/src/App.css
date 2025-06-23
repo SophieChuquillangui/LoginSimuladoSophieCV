@@ -1,0 +1,165 @@
+/*Autor:Sophia Chuquillangui (IFM)*/
+/*Hoja de Estilos para la página*/
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+/* Fondo con imagen difuminada */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1740&q=80");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* Contenedor principal centrado */
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 1rem;
+}
+
+/* Estilo del formulario */
+.formulario {
+    background-color: rgba(255, 255, 255, 0.50);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #222;
+    text-align: center;
+}
+
+    .formulario h2 {
+        font-size: 1.5rem;
+        color: #222;
+    }
+
+    .formulario input {
+        padding: 0.8rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+    }
+
+    .formulario button {
+        padding: 0.8rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+        .formulario button:hover {
+            background-color: #005fa3;
+        }
+
+        .formulario button:disabled {
+            background-color: #aaa;
+        }
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}
+
+.intentos {
+    color: orange;
+    font-size: 0.9rem;
+}
+
+/* Animación de carga */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #007bff; 
+    border-top: 3px solid transparent; 
+    border-radius: 50%;
+    animation: girar 1s linear infinite;
+    display: inline-block;
+}
+
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Dashboard del usuario */
+.dashboard {
+    background-color: rgba(255, 255, 255, 0.50);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    color: #222;
+}
+
+    .dashboard h2 {
+        color: #222;
+        margin-bottom: 1rem;
+    }
+
+.avatar {
+    width: 100px;
+    border-radius: 50%;
+    margin: 1rem 0;
+}
+
+.opciones button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/*Dark theme*/
+.App.dark .formulario,
+.App.dark .dashboard {
+    background-color: rgba(30, 30, 30, 0.85);
+    color: #f0f0f0;
+}
+
+.App.dark input {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+.App.dark button {
+    background-color: #444;
+    color: white;
+}
+
+.App.dark h2,
+.App.dark p,
+.App.dark label,
+.App.dark .error,
+.App.dark .intentos {
+    color: #f0f0f0;
+}
